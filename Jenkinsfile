@@ -10,7 +10,7 @@ pipeline {
 }
 	stage('Setup') {
 	    steps {
-#	sh 'php -v' }
+	sh 'php -v' }
         }
     }
 }
