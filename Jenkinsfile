@@ -10,7 +10,7 @@ pipeline {
 }
 	stage('Setup') {
 	    steps {
-	ssh 'su - jenkins -c "php -v"' }
+	sh 'su - jenkins -c "php -v"' }
         }
     }
 }
