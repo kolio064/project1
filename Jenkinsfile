@@ -4,9 +4,11 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
-		echo 'Hello World'
-		echo 'Running Setup Stage'
+                echo 'Building..'}
+	    steps {
+		echo 'Hello World'}
+	    steps {
+		echo 'Running Setup Stage'}
 	stage('Setup') {
     		sh 'su - jenkins -c "php -v"'
             }
@@ -24,4 +26,3 @@ pipeline {
     }
 }
 
-}
