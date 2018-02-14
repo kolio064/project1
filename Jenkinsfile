@@ -9,18 +9,8 @@ pipeline {
 		echo 'Hello World Times Three'}
 }
 	stage('Setup') {
-    		sh 'su - jenkins -c "php -v"'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+	    steps {
+	ssh 'su - jenkins -c "php -v"' }
         }
     }
 }
-
