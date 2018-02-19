@@ -16,5 +16,9 @@ pipeline {
 	    steps {
 		sh 'pwd' }
 	}
+	stage('Testing3') {
+	    steps {
+		sh 'ls -lha' }
+	}
     }
 }
