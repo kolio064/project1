@@ -18,6 +18,10 @@ pipeline {
 	}
 	stage('Testing3') {
 	    steps {
+		sh 'cd /home/staging/' }
+	}
+	stage('Testing4') {
+	    steps {
 		sh 'ls -lha' }
 	}
     }
