@@ -18,7 +18,8 @@ pipeline {
 	}
 	stage('Testing3') {
 	    steps {
-		sh 'cd /home/staging/' }
+		sh 'cd /home/staging/'
+		sh 'pwd'}
 	}
 	stage('Testing4') {
 	    steps {
