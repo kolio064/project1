@@ -8,9 +8,13 @@ pipeline {
 		echo 'Hello World'
 		echo 'Hello World Times Three'}
 }
-	stage('Setup') {
+	stage('Testing1') {
 	    steps {
-	sh 'php -v' }
+		sh 'php -v' }
         }
+	stage('Testing2') {
+	    steps {
+		sh 'pwd' }
+	}
     }
 }
