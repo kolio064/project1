@@ -1,5 +1,3 @@
-work_dir = '/home/staging/www'
-
 pipeline {
     agent any
 
@@ -14,8 +12,8 @@ pipeline {
 	    steps {
 		sh 'php -v' }
         }
-	stage('Testing2') {
-	dir ('/home/www/staging')
+	stage('Testing2')
+	dir ('/home/www/staging'){
 	    steps {
 		sh 'pwd' }
 	}
