@@ -16,13 +16,12 @@ pipeline {
         }
 	stage('Testing2') {
 	    steps {
-		sh 'cd ${work_dir}'
 		sh 'pwd' }
 	}
 	stage('Testing3') {
 	    steps {
-		sh 'cd /home/staging/'
-		sh 'pwd'}
+		sh 'cd /home/staging/ && pwd'
+		}
 	}
 	stage('Testing4') {
 	    steps {
