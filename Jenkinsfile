@@ -14,6 +14,7 @@ pipeline {
         }
 	stage('Testing2') {
 	    steps {
+		dir('new-dir')
 		sh 'pwd' }
 	}
 	stage('Testing3') {
