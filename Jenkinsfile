@@ -1,4 +1,7 @@
 pipeline {
+environment {
+work_dir = "/home/www/staging"
+}
     agent any
 
     stages {
@@ -12,14 +15,14 @@ pipeline {
 	    steps {
 		sh 'php -v' }
         }
-	stage('Testing2')
-	dir ('/home/www/staging'){
+	stage('Testing2') {
 	    steps {
-		sh 'pwd' }
+		sh 'date' }
 	}
 	stage('Testing3') {
 	    steps {
-		sh 'cd /home/staging/ && pwd' 
+		sh 'cd /home/staging/ && pwd'
+		sh 'pwd'
 		}
 	}
 	stage('Testing4') {
