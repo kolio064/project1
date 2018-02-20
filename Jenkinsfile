@@ -1,3 +1,5 @@
+work_dir = '/home/staging/www'
+
 pipeline {
     agent any
 
@@ -14,7 +16,7 @@ pipeline {
         }
 	stage('Testing2') {
 	    steps {
-		dir('new-dir')
+		sh 'cd ${work_dir}'
 		sh 'pwd' }
 	}
 	stage('Testing3') {
