@@ -21,8 +21,7 @@ work_dir = "/home/www/staging"
 	}
 	stage('Testing3') {
 	    steps {
-		sh 'cd /home/staging/ && pwd'
-		sh 'pwd'
+		sh 'cd /home/staging/ && pwd && ls -lha'
 		sh 'pwd'
 		}
 	}
