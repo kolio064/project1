@@ -27,7 +27,12 @@ work_dir = "/home/www/staging"
 	}
 	stage('Testing4') {
 	    steps {
-		sh 'ls -lha' }
+		sh '''
+		echo "Testing Multiline Shell Steps
+		cd /home/staging/
+		pwd
+		'''
+	    }
 	}
     }
 }
