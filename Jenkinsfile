@@ -28,7 +28,7 @@ work_dir = "/home/www/staging"
 	stage('Testing4') {
 	    steps {
 		sh '''
-		echo "Testing Multiline Shell Steps
+		echo "Testing Multiline Shell Steps"
 		cd /home/staging/
 		pwd
 		'''
