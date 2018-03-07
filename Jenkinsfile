@@ -1,4 +1,4 @@
-pipeline {
+node {
     environment {
 	work_dir = "/home/www/staging"
     }
