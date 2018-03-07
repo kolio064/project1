@@ -8,12 +8,12 @@ pipeline {
     stages {
 
         stage('Build') {
+	    when {
+		expression { BRANCH_NAME ==~ /(master)/ }
+	    }
             steps {
+		echo 'We are in Build .... CONTINUE ... we are in master !!!'
 
-		when {
-		    expression { BRANCH_NAME ==~ /(master)/ }
-		}
-		echo 'CONTINUE ... we are in master !!!'
 
 		sh 'printenv'
 	        echo '======>>> this is env.GIT_BRANCH...' + env.GIT_BRANCH
