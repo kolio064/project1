@@ -17,7 +17,7 @@ work_dir = "/home/www/staging"
         }
 	stage('Testing2') {
 	    steps {
-		sh 'time' }
+		sh 'date' }
 	}
 	stage('Testing3') {
 	    steps {
