@@ -8,7 +8,7 @@ work_dir = "/home/www/staging"
     stages {
         stage('Build') {
             steps {
-
+		sh 'printenv'
 	        echo 'env.BRANCH_NAME...' + env.BRANCH_NAME
                 echo 'Hello World One'
 		echo 'Hello World Two'
