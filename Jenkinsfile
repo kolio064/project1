@@ -1,6 +1,7 @@
 pipeline {
     environment {
-	work_dir = "/home/www/staging"
+	WORK_DIR = "/home/www/staging"
+	WE_BUILD_ONLY_ON="master"
     }
 
     agent any
@@ -9,7 +10,7 @@ pipeline {
 
         stage('Build') {
 	    when {
-		expression { BRANCH_NAME ==~ /(master)/ }
+		expression { BRANCH_NAME == WE_BUILD_ONLY_ON }
 	    }
             steps {
 		echo 'We are in Build .... CONTINUE ... we are in master !!!'
