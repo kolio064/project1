@@ -2,7 +2,6 @@ node {
     environment {
 	work_dir = "/home/www/staging"
     }
-    agent any
     stages {
 
 
