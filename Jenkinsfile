@@ -8,7 +8,8 @@ work_dir = "/home/www/staging"
     stages {
         stage('Build') {
             steps {
-		echo "GIT_BRANCH"
+
+	        echo 'env.BRANCH_NAME...' + env.BRANCH_NAME
                 echo 'Hello World One'
 		echo 'Hello World Two'
 		echo 'Hello World Three'}
