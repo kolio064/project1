@@ -9,7 +9,7 @@ work_dir = "/home/www/staging"
         stage('Build') {
             steps {
 		sh 'printenv'
-	        echo 'env.BRANCH_NAME...' + env.BRANCH_NAME
+	        echo '======>>> this is env.GIT_BRANCH...' + env.GIT_BRANCH
                 echo 'Hello World One'
 		echo 'Hello World Two'
 		echo 'Hello World Three'}
