@@ -1,22 +1,20 @@
-node {
+pipeline {
     environment {
 	work_dir = "/home/www/staging"
     }
+
+    agent any
+
     stages {
-
-
-    stage('Example') {
-        if (env.BRANCH_NAME == 'master') {
-            echo 'I only execute on the master branch'
-        } else {
-            echo 'I execute elsewhere'
-        }
-    }
-
-
 
         stage('Build') {
             steps {
+
+		when {
+		    expression { BRANCH_NAME ==~ /(master)/ }
+		}
+		echo 'CONTINUE ... we are in master !!!'
+
 		sh 'printenv'
 	        echo '======>>> this is env.GIT_BRANCH...' + env.GIT_BRANCH
                 echo 'Hello World One'
