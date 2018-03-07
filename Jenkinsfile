@@ -4,11 +4,11 @@ work_dir = "/home/www/staging"
 }
     agent any
 
-    echo "GIT_BRANCH"
 
     stages {
         stage('Build') {
             steps {
+		echo "GIT_BRANCH"
                 echo 'Hello World One'
 		echo 'Hello World Two'
 		echo 'Hello World Three'}
