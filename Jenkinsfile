@@ -4,6 +4,8 @@ work_dir = "/home/www/staging"
 }
     agent any
 
+    echo "GIT_BRANCH"
+
     stages {
         stage('Build') {
             steps {
