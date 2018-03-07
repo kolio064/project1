@@ -1,11 +1,21 @@
 pipeline {
-environment {
-work_dir = "/home/www/staging"
-}
+    environment {
+	work_dir = "/home/www/staging"
+    }
     agent any
-
-
     stages {
+
+
+    stage('Example') {
+        if (env.BRANCH_NAME == 'master') {
+            echo 'I only execute on the master branch'
+        } else {
+            echo 'I execute elsewhere'
+        }
+    }
+
+
+
         stage('Build') {
             steps {
 		sh 'printenv'
@@ -13,7 +23,7 @@ work_dir = "/home/www/staging"
                 echo 'Hello World One'
 		echo 'Hello World Two'
 		echo 'Hello World Three'}
-}
+	}
 	stage('Testing1') {
 	    steps {
 		sh 'php -v' }
